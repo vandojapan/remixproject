@@ -21,12 +21,13 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
-  build: {
-    outDir: 'public/build',  // Cloudflare Pagesが期待する出力先
-    rollupOptions: {
-      input: '/app/entry.client.tsx', // クライアントエントリーポイント
+    root: 'src', // ソースディレクトリを指定（必要に応じて変更）
+    build: {
+      outDir: '../build', // ビルド出力先を指定
+      rollupOptions: {
+        input: 'src/index.html', // HTMLエントリーポイントを指定
+      },
     },
-  },
   server: {
     fs: {
       allow: ['.'], // ローカルファイルシステムからの読み込みを許可
