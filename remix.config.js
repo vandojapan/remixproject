@@ -3,5 +3,6 @@ module.exports = {
   appDirectory: "app", // アプリのディレクトリ
   assetsBuildDirectory: "public/build", // 公開されるビルドアセットの出力ディレクトリ
   serverBuildDirectory: "build", // サーバビルドの出力ディレクトリ
-  // 他の設定も必要に応じて追加するのじゃ
+  serverBuildTarget: "cloudflare-pages",
+  server: "./server.js", // Cloudflare用のカスタムサーバーを指定
 };
