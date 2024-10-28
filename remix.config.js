@@ -1,7 +1,7 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
-  appDirectory: "app",
-  assetsBuildDirectory: "public/build",
-  serverBuildDirectory: "build/server", // サーバビルドの出力先
+  serverBuildTarget: "cloudflare-pages", // これを確認・設定
+  assetsBuildDirectory: "public/build", // Cloudflareが読むことができるディレクトリに変更
   publicPath: "/build/",
+  serverBuildPath: "build/server.js",
 };
