@@ -10,3 +10,54 @@ body {
     color-scheme: dark;
   }
 }
+
+@layer components {
+  .blog-content {
+    @apply text-base leading-8 text-gray-800;
+  }
+
+  .blog-content > * + * {
+    @apply mt-6;
+  }
+
+  .blog-content h2 {
+    @apply mt-12 text-2xl font-bold leading-tight text-gray-950;
+  }
+
+  .blog-content h3 {
+    @apply mt-10 text-xl font-bold leading-tight text-gray-950;
+  }
+
+  .blog-content p {
+    @apply leading-8;
+  }
+
+  .blog-content a {
+    @apply font-semibold text-emerald-700 underline underline-offset-4;
+  }
+
+  .blog-content ul,
+  .blog-content ol {
+    @apply ml-6 space-y-2;
+  }
+
+  .blog-content ul {
+    @apply list-disc;
+  }
+
+  .blog-content ol {
+    @apply list-decimal;
+  }
+
+  .blog-content img {
+    @apply h-auto max-w-full;
+  }
+
+  .blog-content pre {
+    @apply overflow-x-auto bg-gray-950 p-4 text-sm leading-6 text-gray-100;
+  }
+
+  .blog-content code {
+    @apply bg-gray-100 px-1 py-0.5 text-sm text-gray-900;
+  }
+}
